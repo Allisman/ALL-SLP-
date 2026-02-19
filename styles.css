@@ -1,67 +1,88 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
-  --background-color: #ecf0f1;
-  --text-color: #34495e;
-  --font-family: 'Arial', sans-serif;
+    --bg: #fbfbf7;
+    --ink: #1f2937;
+    --muted: #55605a;
+    --soft: #eef2ea;
+    --card: #ffffff;
+    --border: #dde3d7;
+    --brand: #3b6b4f;
+    --brand2: #8a9b6e;
 }
 
-body {
-  margin: 0;
-  font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: var(--background-color);
+/* Header Styles */
+header {
+    background-color: var(--bg);
+    color: var(--ink);
+    padding: 20px;
+    text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--brand);
+    padding: 10px;
+}
+nav a {
+    color: var(--card);
+    text-decoration: none;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: var(--secondary-color);
-}
-
+/* Hero Section Styles */
 .hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--card);
 }
 
-.header, .footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+/* Card Styles */
+.card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    margin: 10px;
+    padding: 20px;
 }
 
-.component {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
+/* Button Styles */
+.button {
+    background-color: var(--brand);
+    color: var(--card);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: var(--brand2);
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Typography Styles */
+h1, h2, h3 {
+    color: var(--ink);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--muted);
+    color: var(--ink);
+    padding: 10px;
+    text-align: center;
 }
